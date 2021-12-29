@@ -1,0 +1,574 @@
+:root{
+  --primary-color: #0b0d10;
+  --deep-gray: #333333;
+  --light-gray :#dddddd;
+  --deep-blue: #2d78bc;
+  --deep-green: #0b1c26;
+}
+
+/*box sizing*/
+html {
+  font-size: 62.5%;
+}
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+body{
+  font-family: 'Lucida Sans', Arial, sans-serif;
+  color:#000;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration:none;
+  color: var(--primary-color);
+  cursor:pointer;
+}
+
+h1, h2{
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+img{
+  width: 100%;
+}
+
+.hidden{
+  visibility: hidden;
+  height: 0;
+}
+
+/*
+*****************************
+* =Navigation Starts
+*****************************
+*/
+.navbar{
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  color: var(--primary-color);
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  z-index: 100;
+}
+
+.navbar .flex{
+  /*so that it will 
+  target flex in the navbar*/
+  justify-content: space-between;
+}
+.navbar ul{
+  display: flex;
+}
+
+.navbar a{
+  color: var(--primary-color);
+  padding: 10px;
+  margin: 0 5px;
+  font-weight: 600;
+}
+
+
+.navbar a:hover{
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+
+.navbar h1 a{
+  margin: 0;
+  padding: 0;
+}
+
+.navbar h1 a:hover{
+  border:none;
+}
+
+nav #icon{
+  color:var(--primary-color);
+  font-weight: 3rem;
+  cursor: pointer;
+  display: none;
+}
+
+/*nav media queries*/
+@media(max-width: 730px){
+  .navbar ul{
+    flex-direction: column;
+  }
+  .navbar li{
+    margin: 20px 0;
+  }
+  nav #icon{
+    display: block;
+  }
+
+  .navbar ul{   
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  top: 50px;
+  left: -100%;
+  text-align: center;
+  transition: all .5s;
+
+  }
+
+  .navbar ul.show{
+    left: 0;
+  }
+  
+}
+/*
+*****************************
+* =Navigation Endss
+*****************************
+*/
+
+/*
+*****************************
+* =Showcase Starts 
+*****************************
+*/
+.showcase{
+  background-image: url(../img/signup_login.jpg);
+  padding: 230px 0;
+  background-position: center;
+  background-size: cover;
+  height: 650px;
+  position: relative;
+}
+
+.showcase:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.showcase .container{ 
+  max-width: 850px;
+  margin:0 auto;
+  color: #fff;
+  text-shadow: -2px 3px 1px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+/*for shorter border bottom*/
+.showcase .container h2:after{
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  padding-top: 20px;
+  border-bottom: 1px solid #fff;
+}
+.showcase .showcase-contact{
+  width: 500px;
+  margin: 0 auto;
+  text-shadow: none;
+}
+
+.showcase .showcase-contact a{
+  color:#333;
+}
+
+.showcase .showcase-contact i{
+  margin-right: 10px;
+}
+/*
+*****************************
+* =Showcase Ends 
+*****************************
+*/
+
+/*
+*****************************
+* =Info Starts
+*****************************
+*/
+.infos .container{
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.infos .info{
+  grid-template-columns: 100px 1fr;
+  padding: 20px;
+  background: #dddddd;
+  color: #333333;
+  box-shadow: -1px 5px 5px rgba(0, 195, 255, 0.3);
+}
+
+
+/*
+*****************************
+* =Info Ends 
+*****************************
+*/
+
+/*
+*****************************
+* =Articles Starts 
+*****************************
+*/
+
+.articles{
+  background: #dddddd;
+}
+
+.articles .heading{
+  color: #333333;
+}
+
+.articles .grid .card{
+  height: 150px;
+  margin-left: 0;
+}
+
+.articles .grid .card .color{
+  display: inline-flex;
+  padding: 5px 5px;
+  background: #2d78bc;
+  color: #fff;
+  font-weight: 300;
+}
+/*
+*****************************
+* =Articles Ends 
+*****************************
+*/
+
+/*
+*****************************
+* =Support Starts 
+*****************************
+*/
+.support{
+  background: #2d78bc;
+  color: #fff;
+}
+.support .contact .card{
+  background: transparent;
+  margin: 0 ;
+  border: 1px solid #fff;
+  max-height:80px; 
+}
+.support .contact .card h2{
+  margin: 5px 0;
+}
+
+.support .contact .card a{
+  color:#fff;
+  text-decoration: underline;
+}
+
+/*
+*****************************
+* =Support  Ends 
+*****************************
+*/
+
+/*
+*****************************
+* =Sign Up  Login  Starts 
+*****************************
+*/
+.signup-form, .login-form{
+  background-image: url(../img/signup_login.jpg);
+  color:#fff;
+  height: 650px;
+  background-size: cover;
+  position: relative;
+}
+.signup-form .container{
+  padding: 50px 0 10px 0;
+}
+.login-form .container{
+  padding:70px 0 30px 0;
+}
+.signup-form:after, .login-form:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.signup-form .box{
+  max-width: 400px;
+  height: 500px;
+  color:#fff;
+  margin: 50px auto;
+  background: rgba(0,0,0,0.4);
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.login-form .box{
+  max-width: 400px;
+  height: 350px;
+  color:#fff;
+  margin: 80px auto;
+  background: rgba(0,0,0,0.4);
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.signup-form .form-control, .login-form .form-control{
+  margin: 40px 0;
+}
+
+.signup-form input[type="text"],
+.login-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"],
+.login-form input[type="password"] {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  padding: 5px;
+  font-size: 1.6rem;
+}
+
+.signup-form input:focus,
+.login-form input:focus{
+  outline: none;
+}
+
+
+/*
+*****************************
+* =Sign Up Login  Ends 
+*****************************
+*/
+
+/*
+*****************************
+* =Contact Starts 
+*****************************
+*/
+
+.contact .container{
+  padding: 60px 0 30px 0;
+}
+
+.contact .box{
+  max-width: 400px;
+  height: 530px;
+  color:#fff;
+  margin: 10px auto;
+  background: rgba(0,0,0,0.2);
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+.contact .form-control{
+  margin: 40px 0;
+}
+
+.contact input[type="text"],
+.contact input[type="email"]{
+  border: 0;
+  background: transparent;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  padding: 5px;
+  font-size: 1.6rem;
+}
+
+.contact textarea{
+  height: 100px;
+  width: 100%;
+  padding: 5px;
+  background: transparent;
+  color: #fff;
+  vertical-align: middle;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  font-size: 1.6rem;
+}
+
+.contact input:focus, .contact textarea:focus{
+  outline: none;
+}
+/*
+*****************************
+* =Contact Ends 
+*****************************
+*/
+
+/*
+*****************************
+* =About Starts 
+*****************************
+*/
+.about{
+  padding: 70px 0 0 0;
+}
+/*
+*****************************
+* =About Ends 
+*****************************
+*/
+
+
+/*
+*****************************
+* =Footer  Starts 
+*****************************
+*/
+.footer{
+  padding: 50px 0 20px 0;
+  background: #0b1c26;
+  color: #fff;
+}
+
+.footer .flex{
+  justify-content: space-between;
+}
+
+.footer .flex ul{
+  display: flex;
+}
+ 
+ .footer .flex ul li{
+  margin-left: 20px;
+ }
+
+ .footer .flex ul a{
+    color:#fff;
+  }
+  .footer .flex ul a:hover{
+    font-weight: bold;
+  }
+  
+/*
+*****************************
+* =Footer  Ends 
+*****************************
+*/
+
+/*
+*****************************
+* =media queries for tablet 
+*****************************
+*/
+@media(max-width:768px){
+  .infos .grid, .info .grid, .articles .grid, .support .grid{
+    grid-template-columns: 1fr;
+  }
+  .showcase{
+    /*height: auto;*/
+    padding: 120px 0 50px 0;
+  }
+  .showcase .container{
+    overflow: hidden;
+    padding-top: 80px;
+  }
+
+  .showcase .container h2:after{
+  content: "";
+  display: block;
+  margin: 0 auto;
+  min-width: 60%;
+  padding-top: 20px;
+  border-bottom: 1px solid #fff;
+  }
+  .infos .grid{
+    text-align: center;
+  }
+  .infos .grid p{
+    text-align: justify;
+  }
+
+   .contact .box{
+    height: auto;
+  }
+
+  .footer .flex ul{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .flex ul a{
+    color:#fff;
+  }
+  .footer .flex ul a:hover{
+    font-weight: bold;
+  }
+  
+}
+
+/*
+*****************************
+* =Media Queries Phone 
+*****************************
+*/
+@media(max-width: 562px){
+  .showcase{
+    margin-top: 0;
+    height: auto;
+    padding: 30px 0 50px 0;
+  }
+
+.showcase .grid{
+    grid-template-columns: 1fr;
+  }
+
+  .showcase .container h2:after{
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 20px;
+  border-bottom: 1px solid #fff;
+  }
+  
+  .showcase .showcase-contact{
+    width: 100%;
+    margin: 0 auto;
+    text-shadow: none;
+  }
+
+  .navbar ul a{
+    font-size: 1.4rem;
+    padding: 5px;
+  }
+ }
+

@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href=@Url.Content("content/css/utilities.css")>
+    <link rel="stylesheet" type="text/css" href=@Url.Content("content/css/styles.css")>
+    <link rel="stylesheet" type="text/css" href=@Url.Content("content/css/all.min.css")>
+	<title>Online HelpDesk</title>
+    <script src=@Url.Content("content/css/jquery-3.6.0.min.js")></script>
+	<script>
+		$(document).ready(function(){
+			$('#icon').click(function(){
+				$('ul').toggleClass('show');
+			});
+		});
+	</script>
+</head>
+<body>
+	<header>
+	<!-- Navigation starts -->
+		<div class="navbar">
+			<div class="container flex">
+				<h1 class="lead"><a href="index.html">Campus Online Help Desk</a></h1>
+				<nav>
+					<ul class="sm">
+						<li><a href="signup.html">Sign Up</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a class="active" href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+					<label id="icon"><i class="fas fa-bars fa-2x"></i></label>
+				</nav>
+			</div>
+		</div>
+	<!-- Navigation ends -->
+	</header>
+
+	<!-- About Starts -->
+	<section class="about bg-deep-green">
+		<div class="container">
+			<h1 class="lead">About Help-Desk</h1>
+			<ul class="sm">
+				<li>
+					The help desk provides users with the answers they need for their technical issue. By bringing Help Desk Process to the digital medium and onto computers, finding what you are looking for has never been easier.
+				</li>
+
+				<li>
+					Using a web-based Help Desk Process solves problems with expansion and usability over large geographic areas. It also allows field techs or even clients themselves to retrieve up to the minute information regarding their query. Modern Help Desk Process also provides a tracking system, to actively monitor a certain problem area.
+				</li>
+
+			</ul>
+		</div>
+	</section>
+	<!-- About Ends -->
+
+	<!-- FAQ -->
+	<section class="ask-question bg-deep-green py-5" id="faq">
+		<div class="container">
+			<h1 class="lead">Frequently Asked Questions</h1>
+			<div class="answer">
+				<h1>What is HelpDesk?</h1>
+				<p class="sm">The help desk provides users with the answers they need for their technical issue. By bringing Help Desk Process to the digital medium and onto computers</p>
+			</div>
+
+			<div class="answer my-2">
+				<h1>What is the function of HelpDesk?</h1>
+				<p class="sm">The online help desk system will provide information in written like email within the campus. It will also solve the individual problem of wasting time and energy in order to obtain even the basic information regarding the campus and also long and tedious procedure in order to have a solution regarding any particular query.</p>
+			</div>
+
+			 
+		</div>
+	</section>
+	<!-- FAQ Ends -->
+
+	<!-- Contact-Support Starts -->
+	<Section class="support py-5">
+		<div class="container">
+
+			<h2 class="md">Contact our Support HelpDesk</h2>
+			<p class="sm">You can contact us Monday - Friday from 10:00AM to 6:00PM</p>
+
+			<div class="contact grid grid-3 py-3">
+				<div class="card">
+					<p>GENERAL QUESTION</p>
+					<h2><a href="about.html#faq">View FAQs</a></h2>
+				</div>
+
+				<div class="card">
+					<p>CONTACT BY PHONE</p>
+					<h2>+234 769 844 487</h2>
+				</div>
+
+				<div class="card">
+					<p>CONTACT BY EMAIL</p>
+					<h2><a href="contact.html">Send us an Email</a></h2>
+				</div>
+			</div>
+		</div>
+	</Section>
+	<!-- Contact-Support Ends -->
+
+	<!-- Footer Starts -->
+	<footer class="footer">
+		<div class="container flex">
+			<p class="sm">Copyright&copy;Online HelpDesk</p>
+			<div>
+				<ul class="sm">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="signup.html">Sign Up</a></li>
+					<li><a href="login.html">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer Ends -->
+
+</body>
+</html>

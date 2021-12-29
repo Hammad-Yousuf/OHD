@@ -1,0 +1,319 @@
+/* utilities are classes
+ we use all over the web*/
+
+/*
+*****************************
+* =Utilities Starts 
+*****************************
+*/
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto; 
+  padding: 0 40px;
+}
+
+.card{
+  background-color: #fff;
+  box-shadow: -1px 5px 5px rgba(0, 195, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+}
+
+a.active{
+  border-bottom: 2px solid #000;
+}
+
+/*
+*****************************
+* =btn Starts 
+*****************************
+*/
+.btn{
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #fff;
+  color: var(--primary-color);
+  border:none;
+  border-radius: 5px;
+}
+
+.btn-inverse{
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+
+}
+
+.btn:hover{
+  transform: scale(0.99);
+}
+/*
+*****************************
+* =btn Ends 
+*****************************
+*/
+/*
+*****************************
+* =Background  and  
+Color Buttons Start
+*****************************
+*/
+.bg-primary, .btn-primary{
+  background-color:var(--primary-color);
+  color:#fff;
+}
+
+.bg-deep-gray, .btn-deep-gray{
+  background-color:var(--deep-gray);
+  color:#fff;
+}
+
+.bg-light-gray, .btn-light-gray{
+  background-color: var(--light-gray);
+  color:var(--primary-color);
+}
+
+.bg-deep-blue, .btn-deep-blue{
+  background-color: var(--deep-blue);
+  color:#fff;
+}
+
+.bg-deep-green, .btn-deep-green{
+  background-color: var(--deep-green);
+  color:#fff;
+}
+.bg-primary a, .btn-primary a,
+.bg-deep-gray a, .btn-deep-gray a,
+.bg-deep-blue a, .btn-deep-blue a,
+.bg-deep-green a, .btn-deep-green a{
+  color: #fff;
+}
+
+/*
+*****************************
+* =Background  and  
+Color Buttons Ends
+*****************************
+*/
+
+
+/*
+*****************************
+* =Text Color Starts
+*****************************
+*/
+.text-primary{
+  color:var(--primary-color);
+}
+
+.text-gray-light{
+  color:var(--light-gray);
+}
+
+.text-gray-deep{
+  color: var(--deep-gray);
+}
+
+.text-blue-deep{
+  color: var(--deep-blue);
+}
+
+.text-green-deep{
+  color: var(--deep-green);
+}
+/*
+*****************************
+* =Text Color Ends
+*****************************
+*/
+
+/*
+*****************************
+* =Text Sizes Starts 
+*****************************
+*/
+/*html=62.5 - 1rem=10px*/
+
+.lead{
+  font-size: 2rem;/*20px*/
+}
+
+.sm{
+  font-size: 1.6rem;
+}
+
+.md{
+  font-size: 3.2rem;
+}
+
+.lg{
+  font-size: 4.8rem;
+}
+
+.xl{
+  font-size: 6.4rem;
+}
+
+.text-center{
+  text-align: center;
+}
+/*
+*****************************
+* =Text Sizes Ends 
+*****************************
+*/
+
+/*
+*****************************
+* =flex Starts 
+*****************************
+*/
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;  
+}
+/*
+*****************************
+* =Flex Starts 
+*****************************
+*/
+
+
+/*****************************
+* =Grid Starts 
+*****************************
+*/
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+/*
+*****************************
+* =Grid Ends 
+*****************************
+*/
+
+
+/*
+*****************************
+* =Margin Top/Bottom Starts 
+*****************************
+*/
+.my-1{
+  margin: 1rem 0;
+}
+
+.my-2{
+  margin: 1.5rem 0;
+}
+
+.my-3{
+  margin: 2rem 0;
+}
+
+.my-4{
+  margin: 3rem 0;
+}
+
+.my-5{
+  margin: 4rem 0;
+}
+
+/*
+*****************************
+* =Margin Full Starts 
+*****************************
+*/
+
+.m-1{
+  margin: 1rem;
+}
+
+.m-2{
+  margin: 1.5rem;
+}
+
+.m-3{
+  margin: 2rem;
+}
+
+.m-4{
+  margin: 3rem;
+}
+
+.m-5{
+  margin: 4rem;
+}
+
+/*
+*****************************
+* =Padding Top/Bottom Starts 
+*****************************
+*/
+.py-1{
+  padding: 1rem 0;
+}
+
+.py-2{
+  padding: 1.5rem 0;
+}
+
+.py-3{
+  padding: 2rem 0;
+}
+
+.py-4{
+  padding: 3rem 0;
+}
+
+.py-5{
+  padding: 4rem 0;
+}
+/*
+*****************************
+* =Padding Full Starts 
+*****************************
+*/
+.p-1{
+  padding: 1rem;
+}
+
+.p-2{
+  padding: 1.5rem;
+}
+
+.p-3{
+  padding: 2rem;
+}
+
+.p-4{
+  padding: 3rem;
+}
+
+.p-5{
+  padding: 4rem;
+}
+
+/*
+*****************************
+* =Utilities Endss 
+*****************************
+*/

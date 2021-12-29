@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href=@Url.Content("~/content/css/utilities.css")>
+    <link rel="stylesheet" type="text/css" href=@Url.Content("~/content/css/styles.css")>
+    <link rel="stylesheet" type="text/css" href=@Url.Content("~/content/css/all.min.css")>
+    <link rel="stylesheet" href=@Url.Content("https://pro.fontawesome.com/releases/v5.10.0/css/all.css") integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src=@Url.Content("~/content/css/jquery-3.6.0.min.js")></script>
+    <script>
+		$(document).ready(function(){
+			$('#icon').click(function(){
+				$('ul').toggleClass('show');
+			});
+		});
+    </script>
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <header>
+        <!-- Navigation starts -->
+        <div class="navbar">
+            <div class="container flex">
+                <h1 class="lead"><a href="index.html">@Html.ActionLink("Campus Online Help Desk", "Index")</a></h1>
+                <nav>
+                    <ul class="sm">
+                        <li><a href=@Url.Content("~/content/signup.html")>Sign Up</a></li>
+                        <li><a href=@Url.Content("~/content/login.html")>Login</a></li>
+                        <li class="active">@Html.ActionLink("About", "About")</li>
+                        <li>@Html.ActionLink("Contact", "Contact")</li>
+                    </ul>
+                    <label id="icon"><i class="fas fa-bars fa-2x"></i></label>
+                </nav>
+            </div>
+        </div>
+        <!-- Navigation ends -->
+    </header>
+
+    <!-- About Starts -->
+    <section class="about bg-deep-green">
+        <div class="container">
+            <h1 class="lead">About Help-Desk</h1>
+            <ul class="sm">
+                <li>
+                    The help desk provides users with the answers they need for their technical issue. By bringing Help Desk Process to the digital medium and onto computers, finding what you are looking for has never been easier.
+                </li>
+
+                <li>
+                    Using a web-based Help Desk Process solves problems with expansion and usability over large geographic areas. It also allows field techs or even clients themselves to retrieve up to the minute information regarding their query. Modern Help Desk Process also provides a tracking system, to actively monitor a certain problem area.
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    <!-- About Ends -->
+    <!-- FAQ -->
+    <section class="ask-question bg-deep-green py-5" id="faq">
+        <div class="container">
+            <h1 class="lead">Frequently Asked Questions</h1>
+            <div class="answer">
+                <h1>What is HelpDesk?</h1>
+                <p class="sm">The help desk provides users with the answers they need for their technical issue. By bringing Help Desk Process to the digital medium and onto computers</p>
+            </div>
+
+            <div class="answer my-2">
+                <h1>What is the function of HelpDesk?</h1>
+                <p class="sm">The online help desk system will provide information in written like email within the campus. It will also solve the individual problem of wasting time and energy in order to obtain even the basic information regarding the campus and also long and tedious procedure in order to have a solution regarding any particular query.</p>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- FAQ Ends -->
+    <!-- Contact-Support Starts -->
+    <section class="support py-5">
+        <div class="container">
+
+            <h2 class="md">Contact our Support HelpDesk</h2>
+            <p class="sm">You can contact us Monday - Friday from 10:00AM to 6:00PM</p>
+
+            <div class="contact grid grid-3 py-3">
+                <div class="card">
+                    <p>GENERAL QUESTION</p>
+                    <h2><a href="about.html#faq">View FAQs</a></h2>
+                </div>
+
+                <div class="card">
+                    <p>CONTACT BY PHONE</p>
+                    <h2>+92 343 1163620</h2>
+                </div>
+
+                <div class="card">
+                    <p>CONTACT BY EMAIL</p>
+                    <h2><a href="MainTo:yhammad064@gmail.com">Send us an Email</a></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact-Support Ends -->
+    <!-- Footer Starts -->
+    <footer class="footer">
+        <div class="container flex">
+            <p class="sm">Copyright&copy;Online HelpDesk</p>
+            <div>
+                <ul class="sm">
+                    <li><a href=@Url.Content("content/signup.html")>Sign Up</a></li>
+                    <li><a href=@Url.Content("content/login.html")>Login</a></li>
+                    <li><a class="active" href=@Url.Content("content/about.html")>About</a></li>
+                    <li><a href=@Url.Content("content/contact.html")>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+    @RenderBody();
+</body>
+</html>
