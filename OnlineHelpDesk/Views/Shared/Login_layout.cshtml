@@ -40,47 +40,35 @@
         <!-- Navigation ends -->
     </header>
 
-    <!-- Contact Starts -->
-    <section class="contact bg-deep-green py-5">
+    <!-- Login Form Starts -->
+    <section class="login-form">
         <div class="container">
             <form class="box" action="" method="POST">
-
-                <p class="sm" style="color: #0077ff;">Feel free to Email us via HelpDesk@gmail.com</p>
-                <p class="sm py-2">Or fill in the contact form down below</p>
+                <p class="md text-center">Login</p>
 
                 <!-- Input Name -->
                 <div class="form-control">
-                    <label for="name">
-                        <input type="text" name="name"
-                               placeholder="Name" required>
-                    </label>
+                    <input type="text" name="name"
+                           placeholder="Name" required>
                 </div>
 
-                <!-- Input Email -->
+                <!-- Input Password -->
                 <div class="form-control">
-                    <label for="email">
-                        <input type="email" name="email"
-                               placeholder="Email" required>
-                    </label>
+                    <input type="Password" name="Password"
+                           placeholder="Enter Password" required>
                 </div>
 
-                <!-- Input Text area -->
-                <div class="form-control">
-                    <label for="Message">
-                        <textarea name="message" id="message" placeholder="Write Your Message"></textarea>
-                    </label>
-                </div>
 
                 <!-- Input Submit -->
                 <div class="form-control text-center">
-                    <input type="submit" name="Send" value="Send" class="btn btn-inverse">
+                    <input type="submit" name="Send" value="Sign Up" class="btn">
                 </div>
 
             </form>
         </div>
     </section>
 
-    <!-- signup Form Ends -->
+    <!-- Login Form Ends -->
     <!-- Contact-Support Starts -->
     <section class="support py-5">
         <div class="container">
@@ -101,7 +89,7 @@
 
                 <div class="card">
                     <p>CONTACT BY EMAIL</p>
-                    <h2><a href="contact.html" mailto="yhammad064@gmail.com">Send us an Email</a></h2>
+                    <h2><a href="contact.html">Send us an Email</a></h2>
                 </div>
             </div>
         </div>
@@ -122,6 +110,7 @@
         </div>
     </footer>
     <!-- Footer Ends -->
+
     <div>
         @RenderBody()
     </div>
