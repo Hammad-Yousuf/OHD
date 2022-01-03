@@ -320,10 +320,10 @@ nav #icon{
   background-color: #000;
   opacity: 0.6;
 }
-
+ 
 .signup-form .box{
   max-width: 400px;
-  height: 500px;
+  min-height: 500px;
   color:#fff;
   margin: 50px auto;
   background: rgba(0,0,0,0.4);

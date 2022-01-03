@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -45,15 +45,21 @@
 
 			<!-- Input Name -->
 			<div class="form-control">
-				<input type="text" name="name"
-				placeholder="Name" required>
+				<input type="text" name="new_name"
+				placeholder="Enter Your Name" required>
 			</div>
 
 			<!-- Input Email -->
 			<div class="form-control">
-				<input type="email" name="email"
-				placeholder="Email" required>
+				<input type="email" name="new_email"
+				placeholder="Enter Your Email Address" required>
 			</div>
+
+            <!-- Input Email -->
+            <div class="form-control">
+                <input type="number" name="new_phone"
+                placeholder="Enter Your Phone Number" required>
+            </div>
 
 			<!-- Input Password -->
 			<div class="form-control">
@@ -61,11 +67,20 @@
 				placeholder="Enter Password" required>
 			</div>
 
-			<!-- Input Password -->
-			<div class="form-control">
-				<input type="Password" name="Password"
-				placeholder="Confirm Password" required>
-			</div>
+            <!-- Add Image -->
+            <div class="form-control">
+                <input type="file" name="new_image"
+                placeholder="Select Your Image" required/>
+            </div>            
+            <!-- Input User Type -->
+            <div class="form-control">
+                <span>Select Your Type</span>
+                <select name="new_user_type" required>
+                    <option value="1">Student</option>
+                    <option value="2">Facility Head</option>
+                    <option value="3">Asignee</option>
+                </select>
+            </div>
 
 			<!-- Input Submit -->
 			<div class="form-control text-center">

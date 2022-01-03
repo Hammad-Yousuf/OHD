@@ -28,8 +28,8 @@
                     <h1 class="lead">@Html.ActionLink("Campus Online Help Desk", "Index")</h1>
                     <nav>
                         <ul class="sm">
-                            <li><a href=@Url.Content("content/signup.html")>Sign Up</a></li>
-                            <li><a href=@Url.Content("content/login.html")>Login</a></li>
+                            <li>@Html.ActionLink("Sign Up", "Signup")</li>
+                            <li>@Html.ActionLink("Log In","login")</li>
                             <li>@Html.ActionLink("About", "About")</li>
                             <li>@Html.ActionLink("Contact", "Contact")</li>
                         </ul>

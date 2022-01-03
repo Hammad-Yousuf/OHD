@@ -25,7 +25,7 @@
         <!-- Navigation starts -->
         <div class="navbar">
             <div class="container flex">
-                <h1 class="lead">@Html.ActionLink("Campus Online Help Desk", "Index")</h1>
+                <<h1 class="lead">@Html.ActionLink("Campus Online Help Desk", "Index")</h1>
                 <nav>
                     <ul class="sm">
                         <li>@Html.ActionLink("Sign Up", "Signup")</li>
@@ -40,35 +40,65 @@
         <!-- Navigation ends -->
     </header>
 
-    <!-- Login Form Starts -->
-    <section class="login-form">
+    <!-- Signup Form Starts -->
+    <section class="signup-form">
         <div class="container">
-            <form class="box" action="Login" method="POST">
-                <p class="md text-center">Login</p>
+            <div class="box">
+                @using (Html.BeginForm("Signup", "Home", FormMethod.Post, new { enctype = "multipart/Form-Data" }))
+                {
+                    
+                    <p class="md text-center">Sign Up</p>
 
                 <!-- Input Name -->
-                <div class="form-control">
-                    <input type="text" name="login_name"
-                           placeholder="Name" required>
-                </div>
+                    <div class="form-control">
+                        <input type="text" name="new_name"
+                               placeholder="Enter Your Name" required>
+                    </div>
+
+                <!-- Input Email -->
+                    <div class="form-control">
+                        <input type="email" name="new_email"
+                               placeholder="Enter Your Email Address" required>
+                    </div>
+
+                <!-- Input Email -->
+                    <div class="form-control">
+                        <input type="number" name="new_phone"
+                               placeholder="Enter Your Phone Number" required>
+                    </div>
 
                 <!-- Input Password -->
-                <div class="form-control">
-                    <input type="Password" name="login_password"
-                           placeholder="Enter Password" required>
-                </div>
+                    <div class="form-control">
+                        <input type="Password" name="password"
+                               placeholder="Enter Password" required>
+                    </div>
 
+                <!-- Add Image -->
+                    <div class="form-control">
+                        <input type="file" name="new_image"
+                               placeholder="Select Your Image" required />
+                    </div>
+                <!-- Input User Type -->
+                    <div class="form-control">
+                        <span>Select Your Type</span>
+                        <select name="new_user_type" required>
+                            <option value="1">Student</option>
+                            <option value="2">Facility Head</option>
+                            <option value="3">Asignee</option>
+                        </select>
+                    </div>
 
                 <!-- Input Submit -->
-                <div class="form-control text-center">
-                    <input type="submit" value="Sign Up" class="btn">
-                </div>
+                    <div class="form-control text-center">
+                        <input type="submit" value="Sign Up" class="btn">
+                    </div>
 
-            </form>
+                }
+            </div>
         </div>
     </section>
 
-    <!-- Login Form Ends -->
+    <!-- signup Form Ends -->
     <!-- Contact-Support Starts -->
     <section class="support py-5">
         <div class="container">
@@ -110,7 +140,6 @@
         </div>
     </footer>
     <!-- Footer Ends -->
-
     <div>
         @RenderBody()
     </div>

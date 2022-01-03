@@ -38,7 +38,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -99,10 +106,29 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\new_name.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="OHD_DB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OHD_DB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OHD_DB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OHD_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OHD_DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OHD_DB.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>OHD_DB.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -115,6 +141,25 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Shared\Login_layout.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <EntityDeploy Include="OHD_DB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OHD_DB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="OHD_DB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OHD_DB.edmx</DependentUpon>
+      <LastGenOutput>OHD_DB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="OHD_DB.edmx.diagram">
+      <DependentUpon>OHD_DB.edmx</DependentUpon>
+    </Content>
+    <Content Include="OHD_DB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OHD_DB.edmx</DependentUpon>
+      <LastGenOutput>OHD_DB.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\Signup_layout.cshtml" />
+    <Content Include="Views\Home\SignUp.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -125,6 +170,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
