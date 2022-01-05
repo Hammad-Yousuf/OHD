@@ -19,8 +19,7 @@ namespace OnlineHelpDesk
         public string User_Email { get; set; }
         public string User_Phone { get; set; }
         public string User_Password { get; set; }
-        public string User_Type { get; set; }
+        public Nullable<int> User_Type { get; set; }
         public string User_Status { get; set; }
-        public string User_Image { get; set; }
     }
 }

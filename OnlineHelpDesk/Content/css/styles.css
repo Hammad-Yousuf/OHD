@@ -350,10 +350,12 @@ nav #icon{
 }
 
 .signup-form input[type="text"],
-.login-form input[type="text"],
 .signup-form input[type="email"],
 .signup-form input[type="password"],
-.login-form input[type="password"] {
+.signup-form input[type="number"],
+.login-form input[type="password"],
+.login-form input[type="text"],
+.signup-form .select { 
   border: 0;
   background: transparent;
   color: #fff;

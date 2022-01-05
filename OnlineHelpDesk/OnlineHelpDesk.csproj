@@ -105,8 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\new_name.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -140,7 +141,6 @@
     <Content Include="Views\Shared\Contact_layout.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Shared\Login_layout.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
     <EntityDeploy Include="OHD_DB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>OHD_DB.Designer.cs</LastGenOutput>
@@ -159,7 +159,9 @@
       <LastGenOutput>OHD_DB.cs</LastGenOutput>
     </Content>
     <Content Include="Views\Shared\Signup_layout.cshtml" />
-    <Content Include="Views\Home\SignUp.cshtml" />
+    <Content Include="Views\Account\SignUp.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Admin\Admin.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
